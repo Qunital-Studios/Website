@@ -132,6 +132,12 @@ footer{
     background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
 }
 
+.upperFooter div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .upperFooter h3{
     font-weight: 900;
     font-size: 20px;
