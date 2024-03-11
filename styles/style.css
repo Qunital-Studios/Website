@@ -103,11 +103,20 @@ header nav .actionButtonBlue{
     margin-left: 12px;
 }
 
+/* ----- MAIN ----- */
+
+main{
+    background-color: black;
+}
+
+.mainBanner{
+    width: 100%;
+}
+
 /* ----- FOOTER ----- */
 
 footer{
-    position: absolute;
-    bottom: 0;
+    position: relative;
     background-color: black;
     width: 100%;
     color: white;
