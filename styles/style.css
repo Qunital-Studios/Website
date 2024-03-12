@@ -127,20 +127,24 @@ main{
 }
 
 .staffHolder{
-    margin-top: 20px;
+    margin-top: 40px;
     background-color: transparent;
     display: flex;
     justify-content: center;
     gap: 10vw;
     align-items: center;
 }
+
 .staffCard{
     width: 265px;
     background-color: white;
     border-radius: 40px;   
     padding: 25px; 
     position: relative;
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
 }
+
 .staffCardCircle{
     width: 140px;
     aspect-ratio: 1/1;
@@ -150,36 +154,54 @@ main{
     right: -25px;
     top: -25px;
     z-index: 1;
-    box-shadow: hsla(0, 0%, 0%, 0.4) 0px 0px 16px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    transition: all .2s ease-in-out;
 }
+
+.staffCard:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
+}
+
+.staffCard:hover .staffCardCircle{
+    right: -40px;
+    top: -40px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+}
+
 .staffPicture{
     width: calc(100% - 50px);
     aspect-ratio: 1/1;
     border-radius: 25px;
     z-index: 2;
     position: absolute;
-    box-shadow: hsla(0, 0%, 0%, 0.4) 0px 0px 16px;
+    /* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); */
 }
+
 .staffNT{
     width: 100%;
-    background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
+    background: var(--darkGray);
     border-radius: 15px;
     margin-top: 230px;
     padding: 10px;
 }
+
 .staffName{
     text-align: center;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 17px;
 }
+
 .staffRole{
     text-align: center;
     color: white;
     font-weight: 200;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
 }
+
 .staffSocials{
     display: flex;
     align-items: center;
@@ -187,9 +209,11 @@ main{
     margin-top: 25px;
     gap: 20px;
 }
+
 .staffSocials a{
     transition: all .2s ease-in-out;
 }
+
 .staffSocials a:hover{
     filter: none !important;
     transform: scale(1.1);
