@@ -174,11 +174,20 @@ main{
 
 .wwdSection img{
     position: absolute;
-    width: 700px;
-    right: 0;
-    bottom: -135px;
-    transform: rotate(5deg);
+    width: 550px;
+    right: 35px;
+    bottom: -75px;
+    rotate: 5deg;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+    transition: all 0.5s, rotate 0s;
+}
+
+.wwdSection img.hidden{
+    transform: translateX(100%);
+}
+
+.wwdSection img.show{
+    transform: translateX(0);
 }
 
 /* -- TEAM SECTION -- */
@@ -303,6 +312,7 @@ footer{
 }
 
 .upperFooter{
+    transition: transform 1s ease-in-out;
     position: absolute;
     top: -35px;
     display: flex;
@@ -313,6 +323,14 @@ footer{
     border-radius: 40px;
     box-shadow: 0px 10px 50px 10px rgba(4, 0, 255, 0.3);
     background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
+}
+
+.upperFooter.hidden{
+    transform: translateY(-25px);
+}
+
+.upperFooter.show{
+    transform: translateY(0);
 }
 
 .upperFooter div{
