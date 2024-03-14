@@ -91,7 +91,7 @@ header .logo img{
 header nav{
     display: flex;
     align-items: center;
-    gap: 0px;
+    gap: 2px;
 }
 
 header nav a{
@@ -99,10 +99,23 @@ header nav a{
     padding-block: 10px;
     padding-inline: 25px;
     border-radius: 35px;
+    border: 2px transparent solid;
+}
+
+header nav a:hover{
+    animation: colorChanger .4s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorChanger {
+    0%{border: 2px white solid}
+    100%{border: 2px var(--accentLight) solid}
 }
 
 header nav .actionButtonBlue{
     margin-left: 12px;
+    border: none !important;
+    animation: none !important;
 }
 
 /* ----- MAIN ----- */
@@ -176,10 +189,10 @@ main{
     position: absolute;
     width: 550px;
     right: 35px;
-    bottom: -75px;
-    rotate: 5deg;
+    bottom: -71px;
     filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
     transition: all 0.5s, rotate 0s;
+    border-radius: 160px 85px 110px 75px;
 }
 
 .wwdSection img.hidden{
@@ -222,31 +235,53 @@ main{
     transition: all .2s ease-in-out;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
 }
-
+.topLine{
+    position: absolute;
+    top: -4px;
+    height: 4px;
+    width: 0px;
+    background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
+    right: 0;
+    transition: all .3s ease-in-out;
+    border-radius: 2px;
+}
+.rightLine{
+    position: absolute;
+    top: 0;
+    height: 0px;
+    width: 4px;
+    background: linear-gradient(90deg, var(--accentLight), var(--accentDark));
+    right: -4px;
+    transition: all .35s ease-in-out;
+    border-radius: 2px;
+}
 .staffCardCircle{
     width: 140px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
+    background: linear-gradient(180deg, var(--accentLight), var(--accentDark));
     position: absolute;
     right: -25px;
     top: -25px;
     z-index: 1;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
     transition: all .2s ease-in-out;
+    pointer-events: none;
 }
-
 .staffCard:hover{
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
+    transform: translateY(-5px);
 }
-
 .staffCard:hover .staffCardCircle{
     right: -40px;
     top: -40px;
-    width: 125px;
+    width: 100px;
 }
-
+.staffCard:hover .topLine{
+    width: 75%;
+}
+.staffCard:hover .rightLine{
+    height: 80%;
+}
 .staffPicture{
     width: calc(100% - 50px);
     aspect-ratio: 1/1;
