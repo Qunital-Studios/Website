@@ -211,6 +211,7 @@ main{
 .teamSection{
     margin-bottom: 150px;
     margin-top: 25px;
+    transition: all .2s ease-in-out;
 }
 
 .staffTitle{
@@ -234,7 +235,7 @@ main{
     width: 265px;
     background-color: white;
     border-radius: 40px;   
-    padding: 25px; 
+    padding: 25px;
     position: relative;
     transition: all .2s ease-in-out;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
@@ -287,20 +288,22 @@ main{
     height: 80%;
 }
 .staffPicture{
-    width: calc(100% - 50px);
+    width: 100%;
     aspect-ratio: 1/1;
     border-radius: 25px;
     z-index: 2;
-    position: absolute;
+    position: relative;
+    display: block;
     box-shadow: black 0px 0px 10px;
     transition: border-radius .2s ease-in-out;
+    margin-inline: auto;
 }
 
 .staffNT{
     width: 100%;
-    background-image: linear-gradient(90deg, var(--accentLight), var(--accentDark));
+    background: var(--darkGray);
     border-radius: 15px;
-    margin-top: 230px;
+    margin-top: 20px;
     padding: 10px;
     transition: all .3s ease-in-out;
 }
@@ -366,10 +369,11 @@ footer{
     border-radius: 40px;
     box-shadow: 0px 10px 50px 10px rgba(4, 0, 255, 0.3);
     background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
+    transition: all .1s ease-in-out;
 }
 
 .upperFooter.hidden{
-    transform: translateY(-25px);
+    transform: translateY(25px);
 }
 
 .upperFooter.show{
@@ -408,6 +412,10 @@ footer{
     right: 18%;
     width: 200px;
     filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.2));
+    transition: all .1s ease-in-out;
+}
+.upperFooter a{
+    transition: all .1s ease-in-out;
 }
 
 .midFooter{
@@ -470,6 +478,8 @@ footer{
     }
     .staffCard{
         width: 220px;
+        padding: 22px;
+        border-radius: 35px;
     }
     .staffCardCircle{
         width: 100px;
@@ -479,8 +489,12 @@ footer{
         right: -30px;
         top: -30px;
     }
+    .staffPicture{
+        border-radius: 18px;
+    }
     .staffNT{
-        margin-top: 190px;
+        margin-top: 18px;
+        border-radius: 12px;
     }
     .staffSocials{
         margin-top: 10px;
@@ -505,12 +519,11 @@ footer{
     }
     .staffCard{
         width: 170px;
-        padding-top: 15px;
-        padding-bottom: 10px;
-        border-radius: 30px;
+        padding: 15px;
+        border-radius: 22px;
     }
     .staffPicture{
-        border-radius: 20px;
+        border-radius: 16px;
     }
     .staffCardCircle{
         width: 80px;
@@ -521,8 +534,8 @@ footer{
         top: -20px;
     }
     .staffNT{
-        margin-top: 125px;
-        border-radius: 12px;
+        margin-top: 13px;
+        border-radius: 10px;
     }
     .staffSocials{
         gap: 9px;
@@ -539,6 +552,19 @@ footer{
     }
     .wwdSection img{
         width: 350px;
+    }
+    .upperFooter{
+        width: 90vw;
+        gap: 8vw;
+    }
+    .upperFooter img{
+        right: 22%;
+    }
+    .upperFooter div p{
+        font-size: 12px;
+    }
+    .upperFooter div h3{
+        font-size: 16px;
     }
 }
 
@@ -563,9 +589,41 @@ footer{
         bottom: 25px;
         right: 10px;
     }
+    .staffHolder{
+        gap: 6vw;
+    }
+    .upperFooter{
+        gap: 6vw;
+    }
+    .upperFooter img{
+        right: 18%;
+    }
+    .upperFooter div p{
+        font-size: 12px;
+    }
+    .upperFooter div h3{
+        font-size: 16px;
+    }
+    .upperFooter a{
+        padding-block: 7px;
+        padding-inline: 9px;
+    }
+    .upperFooter a p{
+        font-size: 13px !important;
+    }
+    .upperFooter img{
+        width: 150px;
+        bottom: -90px;
+    }
+    .teamSection{
+        margin-top: 70px;
+    }
 }
 
 @media (max-width: 600px) {
+    header nav{
+        display: none;
+    }
     .bannerText h2{
         font-size: 26px;
     }
@@ -590,6 +648,72 @@ footer{
         font-size: 14px;
         padding-bottom: 50px;
     }
+    .staffCard{
+        width: 130px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        padding-inline: 10px;
+        padding-bottom: 5px;
+    }
+    .staffPicture{
+        border-radius: 10px;
+    }
+    .staffCardCircle{
+        width: 60px;
+    }
+    .staffCard:hover .staffCardCircle{
+        width: 50px;
+    }
+    .staffNT{
+        margin-top: 10px;
+        padding: 7px;
+    }
+    .staffName{
+        font-size: 10px;
+    }
+    .staffRole{
+        font-size: 8px;
+    }
+    .upperFooter{
+        padding-inline-start: 35px;
+        gap: 10vw;
+    }
+    .upperFooter div p{
+        font-size: 10px;
+    }
+    .upperFooter div h3{
+        font-size: 14px;
+    }
+    .upperFooter img{
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .staffCardCircle{
+        width: 50px;
+        top: -20px;
+        right: -20px;
+    }
+    .staffCard:hover .staffCardCircle{
+        width: 40px;
+    }
+}
+
+@media (max-width: 520px) {
+    .upperFooter{
+        gap: 15vw;
+    }
+    .upperFooter div h3{
+        font-size: 12px;
+    }
+    .upperFooter div p{
+        font-size: 8px;
+    }
+    .upperFooter a p{
+        font-size: 10px !important;
+    }
 }
 
 @media (max-width: 500px) {
@@ -602,6 +726,20 @@ footer{
     }
     .wwdSection img{
         width: 220px;
+    }
+    .staffHolder{
+        gap: 4vw;
+    }
+    .staffCardCircle{
+        width: 40px;
+        right: -15px;
+        top: -15px;
+    }
+    .staffCard:hover .staffCardCircle{
+        width: 35px;
+    }
+    .teamSection{
+        margin-top: 45px;
     }
 }
 
@@ -626,6 +764,49 @@ footer{
         font-size: 11px;
         width: 350px;
     }
+    .staffHolder{
+        flex-direction: column;
+        gap: 45px;
+    }
+    .staffCard{
+        width: 70vw;
+        border-radius: 30px;
+        padding-inline: 20px;
+        padding-block-start: 30px;
+    }
+    .staffPicture{
+        border-radius: 15px;
+    }
+    .staffNT{
+        padding: 12px;
+        margin-top: 25px;
+        border-radius: 11px;
+    }
+    .staffName{
+        font-size: 16px;
+    }
+    .staffRole{
+        font-size: 14px;
+    }
+    .staffSocials{
+        margin-top: 15px;
+        gap: 25px;
+    }
+    .staffSocials img{
+        width: 40px;
+    }
+    .staffCardCircle{
+        width: 130px;
+        right: -30px;
+        top: -30px;
+    }
+    .staffCard:hover .staffCardCircle{
+        width: 100px;
+    }
+    .upperFooter{
+        gap: 6vw;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -643,5 +824,16 @@ footer{
         width: 300px;
         font-size: 10px;
         padding-bottom: 30px;
+    }
+    .upperFooter{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .upperFooter{
+        padding-inline-start: 10px;
+        gap: 5vw;
     }
 }
