@@ -201,10 +201,12 @@ main{
 
 .wwdSection img.hidden{
     transform: translateX(100%);
+    transition: none !important;
 }
 
 .wwdSection img.show{
     transform: translateX(0);
+    transition: all 0.5s, transform .4s ease-in-out !important;
 }
 
 /* -- TEAM SECTION -- */
