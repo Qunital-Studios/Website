@@ -606,19 +606,17 @@ footer{
 
 @media (max-width: 450px) {
     .wwdSection{
-        height: 220px;
+        height: 250px;
         gap: 20px
     }
     .wwdSection p{
         width: 380px;
         font-size: 12px;
-        padding-bottom: 30px;
+        padding-bottom: 45px;
     }
     .wwdSection h1{
         font-size: 22px;
-    }
-    .wwdSection img{
-        width: 180px;
+        margin-top: 110px;
     }
     .bannerText h2{
         font-size: 23px;
@@ -633,19 +631,16 @@ footer{
     .bannerText h2{
         font-size: 20px;
     }
-    .bannerText p {
+    .bannerText p{
         font-size: 8px;
         width: 300px;
     }
     .wwdSection{
-        height: 190px;
+        height: 220px;
     }
     .wwdSection p{
         width: 300px;
         font-size: 10px;
-        padding-bottom: 25px;
-    }
-    .wwdSection img{
-        width: 150px;
+        padding-bottom: 30px;
     }
 }
