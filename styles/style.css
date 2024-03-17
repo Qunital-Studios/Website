@@ -620,6 +620,13 @@ footer{
     .wwdSection img{
         width: 180px;
     }
+    .bannerText h2{
+        font-size: 23px;
+    }
+    .bannerText p{
+        font-size: 11px;
+        width: 350px;
+    }
 }
 
 @media (max-width: 400px) {
