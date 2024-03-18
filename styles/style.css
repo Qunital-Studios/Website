@@ -159,14 +159,15 @@ header nav .actionButtonBlue{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding-top: calc(env(safe-area-inset-top) + 80px);
-    padding-bottom: 70px;
+    padding-top: calc(env(safe-area-inset-top) + 40px);
+    padding-bottom: 110px;
 }
 .headerMenu.show{
     transform: translateY(0);
 }
 .headerMenu a{
     font-size: 25px;
+    letter-spacing: 5px;
 }
 .headerMenu a{
     display: block;
@@ -675,6 +676,12 @@ footer{
     }
     .teamSection{
         margin-top: 70px;
+    }
+}
+
+@media (min-width: 651px){
+    .headerMenu.show{
+        transform: translateY(-100%);
     }
 }
 
