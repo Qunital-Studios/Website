@@ -1,21 +1,18 @@
 html{
     scroll-behavior: smooth;
 }
-
 :root{
     --accentLight: #0083f3;
     --accentDark: #000fa4;
     --lightGray: #D2D3E4;
     --darkGray: #121212;
 }
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-weight: 400;
 }
-
 body{
     background-color: var(--darkGray);
     font-family: "Inter", sans-serif;
@@ -29,11 +26,9 @@ a{
     text-decoration: none;
     color: white;
 }
-
 a:hover{
     filter: brightness(0.75);
 }
-
 img{
     pointer-events: none;
 }
@@ -49,7 +44,6 @@ img{
     border-radius: 35px;
     background: linear-gradient(135deg, var(--accentLight), var(--accentDark));
 }
-
 .actionButtonWhite{
     transition: all .2s ease-in-out;
     padding-block: 10px;
@@ -57,7 +51,6 @@ img{
     border-radius: 35px;
     background: white;
 }
-
 .actionButtonWhite p{
     font-weight: 600 !important;
     background: -webkit-linear-gradient(135deg, var(--accentLight), var(--accentDark));
@@ -74,26 +67,23 @@ header{
     align-items: center;
     padding: 20px;
     text-transform: uppercase;
+    overflow-y: hidden;
 }
-
 header .logo{
     display: flex;
     align-items: center;
     gap: 15px;
     transition: all .2s ease-in-out;
 }
-
 header .logo img{
     width: 50px;
     aspect-ratio: 1 / 1;
 }
-
 header nav{
     display: flex;
     align-items: center;
     gap: 2px;
 }
-
 header nav a{
     transition: all .2s ease-in-out;
     padding-block: 10px;
@@ -101,21 +91,85 @@ header nav a{
     border-radius: 35px;
     border: 2px transparent solid;
 }
-
+header a p{
+    transition: all .2s ease-in-out;
+}
 header nav a:hover{
     animation: colorChanger .4s linear;
     animation-fill-mode: forwards;
 }
-
 @keyframes colorChanger {
     0%{border: 2px white solid}
     100%{border: 2px var(--accentLight) solid}
 }
-
 header nav .actionButtonBlue{
     margin-left: 12px;
     border: none !important;
     animation: none !important;
+}
+.headerMenuButton{
+    z-index: 2;
+    width: 30px;
+    aspect-ratio: 1/1;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+.headerMenuButton span{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    transition: all .2s ease-in-out;
+}
+.headerMenuButton span:nth-child(1){
+    width: 20px;
+    align-self: flex-start;
+}
+.headerMenuButton span:nth-child(4){
+    width: 15px;
+    align-self: flex-end;
+}
+.headerMenuButton span:nth-child(1).clicked{
+    transform: rotate(45deg) translate(6px, 14px);
+    width: calc(100% * sqrt(2));
+}
+.headerMenuButton span:nth-child(2).clicked ,span:nth-child(3).clicked{
+    opacity: 0;
+    width: 5px;
+    transform: rotate(90deg);
+}
+.headerMenuButton span:nth-child(4).clicked{
+    transform: rotate(135deg) translate(-14px, 6px);
+    width: calc(100% * sqrt(2));
+}
+.headerMenuButton.clicked{
+    transform: scale(0.85);
+}
+.headerMenu{
+    z-index: 1;
+    position: absolute;
+    top:0;
+    right: 0;
+    transition: all .4s ease-in-out;
+    transform: translateY(-100%);
+    width: 100%;
+    background: var(--darkGray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: calc(env(safe-area-inset-top) + 80px);
+    padding-bottom: 70px;
+}
+.headerMenu.show{
+    transform: translateY(0);
+}
+.headerMenu a{
+    font-size: 25px;
+}
+.headerMenu a{
+    display: block;
 }
 
 /* ----- MAIN ----- */
@@ -624,10 +678,19 @@ footer{
     }
 }
 
-@media (max-width: 600px) {
-    header nav{
+@media (max-width: 650px){
+    header nav a{
         display: none;
     }
+    .headerMenuButton{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
     .bannerText h2{
         font-size: 26px;
     }
@@ -721,6 +784,9 @@ footer{
 }
 
 @media (max-width: 500px) {
+    header a p{
+        opacity: 0;
+    }
     .wwdSection{
         height: 290px;
     }
