@@ -1,0 +1,53 @@
+main{
+    color: white;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 60px;
+}
+
+main img{
+    width: 100%;
+    object-fit: cover;
+}
+
+section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: -100px;
+}
+
+section h2{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    padding-inline: 35px;
+    padding-block: 10px;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.artistLink{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    min-width: 300px;
+    background-color: black;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+.artistLink h3{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.artistLink a{
+    color: var(--accentLight);
+}
