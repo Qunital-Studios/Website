@@ -35,7 +35,7 @@ section h2{
 .artistLink{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     padding: 20px;
     min-width: 300px;
     background-color: black;
@@ -50,4 +50,14 @@ section h2{
 
 .artistLink a{
     color: var(--accentLight);
+    text-transform: none;
+    transition: all .2s ease-in-out;
+}
+
+.licenseLink{
+    background-color: white;
+    color: var(--accentLight);
+    padding-block: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
 }
