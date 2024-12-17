@@ -928,3 +928,88 @@ footer{
         gap: 5vw;
     }
 }
+
+.licence{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
+    margin-bottom: 120px;
+}
+
+.roomRuleLogo{
+    aspect-ratio: 1/1;
+    width: 270px;
+}
+
+.licenceHolder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    position: relative;
+    box-sizing: border-box;
+    color: #FFF;
+    background: #000;
+    background-clip: padding-box;
+    border: solid 5px transparent;
+    border-radius: 30px;
+    padding: 50px;
+    gap: 30px;
+  }
+  .licenceHolder:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(0deg, var(--accentDark), var(--accentLight));
+  }
+
+.licenceHolder h1{
+    color: white;
+    width: 100%;
+    padding-left: 15px;
+}
+
+.licenceItem{
+    width: 100%;
+    background-color: var(--darkGray);
+    border: 1px solid var(--lightGray);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.btnHolder{
+    flex-grow: 1;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.licenceItem a{
+    background-color: transparent;
+    background-image: linear-gradient(-90deg,var(--accentDark),var(--accentLight));
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 52px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.licenceItem img{
+    width: 40%;
+}
