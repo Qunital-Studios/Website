@@ -1048,3 +1048,46 @@ footer{
         border-radius: 5px;
     }
 }
+
+/* PRIVACY POLICY SCREEN */
+
+.privacyPolicyContent{
+display: flex;
+flex-direction: column;
+gap: 20px;
+width: 80%;
+padding: 20px !important;
+}
+
+.privacyPolicyContent p{
+color: var(--lightGray);
+font-size: 17px;
+}
+
+.privacyPolicyContent h2{
+color: white;
+font-size: 27px;
+font-weight: 700;
+}
+
+.privacyPolicyContent h2 span{
+font-style: italic;
+}
+
+.privacyPolicyContent ul span{
+font-style: italic;
+font-weight: 500;
+color: var(--neutral700);
+}
+
+.privacyPolicyContent ul{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.privacyPolicyContent .emailField{
+color: var(--neutral700);
+font-style: italic;
+text-decoration: underline;
+}
