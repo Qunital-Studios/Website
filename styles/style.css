@@ -1091,3 +1091,6 @@ color: var(--neutral700);
 font-style: italic;
 text-decoration: underline;
 }
+#accountDeletion{
+    color: white;
+}
